@@ -20,7 +20,13 @@
 
 # Searches data bag "users" for groups attribute "sysadmin".
 # Places returned users in Unix group "sysadmin" with GID 2300.
+
+gid = value_for_platform(
+  'smartos' => {'default' => 14},
+  'default' => 2300
+)
+
 users_manage "sysadmin" do
-  group_id 2300
+  group_id gid
   action [ :remove, :create ]
 end

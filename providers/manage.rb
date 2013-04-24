@@ -144,6 +144,7 @@ action :create do
   end
 
   group new_resource.group_name do
+    append true
     gid new_resource.group_id
     members security_group
   end

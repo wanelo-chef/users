@@ -8,6 +8,6 @@ version          "1.5.1"
 recipe           "users", "Empty recipe for including LWRPs"
 recipe           "users::sysadmins", "Create and manage sysadmin group"
 
-%w{ ubuntu debian redhat centos fedora freebsd}.each do |os|
+%w{ ubuntu debian redhat centos fedora freebsd smartos}.each do |os|
   supports os
 end
