@@ -78,6 +78,8 @@ action :create do
         group u['username'] do
           gid u['gid']
         end
+      elsif node['platform'] == 'smartos'
+        u['gid'] = 1
       end
 
       # Create user object.
